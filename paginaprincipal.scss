@@ -1,0 +1,182 @@
+//---IMPORTS----------
+@import "_vars";
+@import "_mixins";
+
+//---FONT-------------
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+//---BODY----------
+
+body {
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center center;
+    margin: 0%;
+}
+
+//---DEFINIÇÃO DO TEXTO------------------------
+.texto{
+  padding: 10%;
+}
+h1{
+  @include titletext;
+}
+h2{
+  @include subtitle;
+  font-weight: bold;
+}
+h3{
+  @include subtitle;
+}
+p{
+  @include text;
+}
+q{
+  font-style: italic;
+}
+hr{
+  visibility: hidden;
+  height: 1em;
+}
+hr .Separador{
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.50);
+
+}
+
+//---PAGINA_PRINCIPAL-------------------------------------------
+header{
+  @include barra;
+  top: 0px;
+  z-index: 6;
+    img{
+      margin-left: 50px;
+      width: 250px;
+      position:absolute;
+      top: 11px;
+    }
+    ul{
+      @include menudef;
+    }
+    li{
+      margin: 0px 20px 0px 0px;
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: #b2b1b0;
+    }
+    #sig{
+      text-decoration: underline;
+      color: #b2b1b0;
+    }
+  }
+//FALTA reparar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.slideshoweventos{
+  width: 100%;
+  height:100%;
+  margin: -30px 0px 0px 0px;
+  overflow: hidden;
+  img{
+   width:100%;
+   height: 100%;
+  }
+}
+//---SETAS--------------
+#prevnext{
+  //visibility: hidden;
+  width:100%;
+  height: 19px;
+  display: flex;
+  position:relative;
+  padding-top: 5px;
+  img{
+    width:50%;
+  }
+}
+#previous{
+padding-left: 47%;
+padding-right: 3%;
+}
+
+
+
+//---ABOUT---------------------------------------------------
+.FBAUP{
+  background-image: url("Imagens/Background_FBAUP.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 745px;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.fbaup_caixabranca{
+  @include barradetexto;
+  height: 745px;
+  float: right;
+}
+.texto{
+  padding: 10%;
+}
+
+//---SERVIÇOS, CURSOS E EVENTOS-----------------------------------------------
+#TABELA{
+  width: 100%;
+  div {
+    display: inline;
+    flex-wrap: wrap;
+    flex-flow: column-reverse;
+    width: 33%;
+    height: 100%;;
+  }
+  img {
+    width: 33%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    filter: brightness(100%);
+  }
+  img:hover{
+    filter: grayscale(100%);
+    filter: brightness(75%);
+  }
+}
+
+//---EVENTOS DESCRIÇÃO-------------------------------------------------
+#link{
+  color: white;
+}
+.caixadetexto{
+  @include barradetexto;
+  position:absolute;
+    top: 0px;
+    right: 0px;
+}
+
+//---FOOTER------------------------------------------------------------
+footer{
+  @include barra;
+  position: relative;
+  bottom: 0px;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.80);
+  ul{
+    @include menudef;
+    font-weight: normal;
+  }
+  li{
+    margin: 0px 20px 0px 0px;
+    list-style: none;
+  }
+  a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #b2b1b0;
+  }
+}
+
+
+@media only screen and (max-width: 990px) {

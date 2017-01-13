@@ -1,0 +1,45 @@
+@mixin barra {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.50);
+}
+@mixin menudef{
+  font-family: $textfont;
+  font-weight: bold;
+  font-size: 13pt;
+  color: #b2b1b0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 50px;
+}
+
+@mixin titletext{
+  font-family: $textfont;
+  font-size: 30pt;
+  font-weight:bold;
+  color: black;
+  margin-top: 40px;
+}
+
+@mixin subtitle {
+  font-family: $textfont;
+  font-size:14pt;
+  color: black;
+  line-height: 1em;
+
+}
+
+@mixin text {
+  font-family: $textfont;
+  font-size: 12pt;
+}
+
+@mixin barradetexto {
+  background-color: red;
+  height: auto;
+  width: 33.33%;
+  text-align: left;
+}
