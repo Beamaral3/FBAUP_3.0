@@ -72,7 +72,7 @@ header{
       color: #b2b1b0;
     }
   }
-//FALTA reparar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 .slideshoweventos{
   width: 100%;
   height:100%;
@@ -105,7 +105,7 @@ padding-right: 3%;
 //---ABOUT---------------------------------------------------
 .FBAUP{
   background-image: url("Imagens/Background_FBAUP.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 745px;
@@ -146,6 +146,31 @@ padding-right: 3%;
 }
 
 //---EVENTOS DESCRIÇÃO-------------------------------------------------
+.eventosdesc{
+  background-image: url("Imagens/Background_40 Anos, Cinanima.png");
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:center center;
+  margin: 0%;
+}
+.eventosdesc1{
+  background-image: url("Imagens/Background_Linhas de Fundo.png");
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:center center;
+  margin: 0%;
+}
+.eventosdesc2{
+    background-image: url("Imagens/Background_Cópia Certificada.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center center;
+    margin: 0%;
+}
+
 #link{
   color: white;
 }
@@ -178,5 +203,167 @@ footer{
   }
 }
 
+//---RESPONSIVE-----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (max-width: 1024px) { //---IPAD PRO--------------
+  #prevnext{
+    display: none;
+  }
 
-@media only screen and (max-width: 990px) {
+  .FBAUP{
+    height: 650px;
+  }
+  .fbaup_caixabranca{
+    height: 650px;
+  }
+  .caixadetexto{
+    @include barradetexto;
+    position:relative;
+      top: 350px;
+      right: 0px;
+      width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) { //---IPAD------------------
+  header{
+      ul{
+        font-size: 11pt;
+      }
+      li{
+        margin: 0px 10px 0px 0px;
+      }
+    }
+
+  #prevnext{
+    display: none;
+  }
+
+  .eventosdesc{
+    background-image: url("Imagens/Background_40 Anos, Cinanima.png");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top center;
+    margin: 0%;
+  }
+  .eventosdesc1{
+    background-image: url("Imagens/Background_Linhas de Fundo.png");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:top center;
+    margin: 0%;
+  }
+  .eventosdesc2{
+      background-image: url("Imagens/Background_Cópia Certificada.jpg");
+      background-size:100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position:top center;
+      margin: 0%;
+  }
+
+  .FBAUP{
+    height: 530px;
+  }
+  .fbaup_caixabranca{
+    width: 50%;
+    height: 535px;
+  }
+  .texto{
+    padding: 5% 10% 5% 10%;
+  }
+
+  #TABELA{
+    div {
+      width: 49%;
+    }
+    img {
+      width: 49%;
+    }
+  }
+}
+@media only screen and (max-width: 441px) { //--I PHONE 6
+//---PAGINA_PRINCIPAL-------------------------------------------
+  header{
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.70);
+      img{
+        margin-left: 15px;
+        width: 180px;
+      }
+      li{
+        margin: 30px 10px 0px 0px;
+      }
+      ul{
+        font-size: 8pt;
+        margin-right: 10px;
+      }
+    }
+  .slideshoweventos{
+    visibility: hidden;
+    }
+    //---SETAS--------------
+  #prevnext{
+    display: none;
+  }
+  #previous{
+    display: none;
+  }
+  //---ABOUT------------------------------------------------
+  .FBAUP{
+    width: auto;
+    height: 260px;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .fbaup_caixabranca{
+    float:none;
+    position:relative;
+    top:264px;
+    width: 95%;
+    height: 190px;
+    h1{
+      font-size: 10pt;
+      margin-top: 0;
+    }
+    p{
+      font-size:7pt;
+    }
+  }
+  .texto{
+    margin-top: 0;
+    padding: 8%;
+  }
+  //---SERVIÇOS, CURSOS E EVENTOS------------------------------------
+  #TABELA{
+    width: 100%;
+    position: relative;
+    top:100px;
+    div {
+      width: 49.4%;
+      height: 100%;;
+    }
+    img {
+      width: 49.4%;
+    }
+  }
+  //---FOOTER------------------------------------------------------------
+  footer{
+    position: relative;
+    top:200px;
+    bottom: 0px;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.80);
+    ul{
+      @include menudef;
+      font-weight: normal;
+    }
+    li{
+      margin: 0px 30px 0px 0px;
+      list-style: none;
+      font-size: 7pt;
+    }
+  }
+}
